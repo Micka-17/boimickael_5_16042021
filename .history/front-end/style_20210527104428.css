@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#container {
+    max-width: 1500px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: 200px;
+}
+.top {
+    di
+}
+#title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}

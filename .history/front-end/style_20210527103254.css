@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#container {
+    max-width: 1500px;
+}
+
+.logo {
+    margin: 40px;
+    width: 200px;
+}
+
+.logo span {
+    color: blueviolet;
+}
+
+#title {
+    font-size: 1em;
+}

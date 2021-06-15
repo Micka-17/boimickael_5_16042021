@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#container {
+    max-width: 1500px;
+}
+
+.logo {
+    position: absolute;
+    top
+}
+
+.logo span {
+    color: blueviolet;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#title {
+   
+    
+}

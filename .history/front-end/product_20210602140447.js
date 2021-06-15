@@ -1,0 +1,3 @@
+// recup id url
+
+windowLocation
