@@ -41,7 +41,7 @@ function addElement (cameras) {
     let add = document.createElement("p");
         cards.appendChild(add);
         add.classList.add("d-flex","justify-content-evenly");
-        add.innerHTML = `<a class="add" href="../front-end/product.html?id=${cameras[i]._id}"><i class="far fa-plus-square fa-3x"></i></a>`;
+        add.innerHTML = `<a class="add" href="./front-endproduct.html?id=${cameras[i]._id}"><i class="far fa-plus-square fa-3x"></i></a>`;
     }
 }
 

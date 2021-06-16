@@ -65,12 +65,12 @@ function createCard (selectedProduct) {
         <input type="text" id="quantity" value="1" placeholder="Maximum 3" 
         min="1" max="3">
         <button class="btn plus-btn" type="button">+</button>
-        <a class="add" href="../front-end/basket.html"><i class="fas fa-cart-arrow-down fa-3x"></i></a>`;
+        <a class="add" href="basket.html"><i class="fas fa-cart-arrow-down fa-3x"></i></a>`;
 
 
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
 
-        let valueCount
+        const valueCount
 
         document.querySelector(".plus-btn").addEventListener("click", function() {
             valueCount = document.getElementById("quantity").value;

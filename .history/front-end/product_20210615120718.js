@@ -70,7 +70,7 @@ function createCard (selectedProduct) {
 
         document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
 
-        let valueCount
+        const valueCount
 
         document.querySelector(".plus-btn").addEventListener("click", function() {
             valueCount = document.getElementById("quantity").value;
@@ -149,4 +149,3 @@ else{
 
     })
 };
-
