@@ -51,7 +51,7 @@ if(savedValue === null) {
         console.log(newDiv);
 
         //// Salut Nicolas ! Ca merde ici///////////////
-
+        
       // for (let j = 0; j < optionPresent.length; j++) {
         // console.log("yuflkyf" + optionPresent);
        let valueCount;
@@ -96,7 +96,7 @@ if(savedValue === null) {
                document.querySelector(".plus-btn").classList.remove("disabled");
            } 
 });
-     // }  //// Au revoir Nicolas ! Ca merde plus!///////////////
+     // }
     }
 
     let btnConfirm = document.createElement("button");

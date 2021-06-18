@@ -50,8 +50,7 @@ if(savedValue === null) {
         <button class="btn plus-btn" type="button">+</button><button class="btn deleteMe"><i class="far fa-trash-alt"></i></button>`; //savedValue[i].numberId + 
         console.log(newDiv);
 
-        //// Salut Nicolas ! Ca merde ici///////////////
-
+        //// Salut Nicolas ! Ca merd
       // for (let j = 0; j < optionPresent.length; j++) {
         // console.log("yuflkyf" + optionPresent);
        let valueCount;
@@ -96,7 +95,7 @@ if(savedValue === null) {
                document.querySelector(".plus-btn").classList.remove("disabled");
            } 
 });
-     // }  //// Au revoir Nicolas ! Ca merde plus!///////////////
+     // }
     }
 
     let btnConfirm = document.createElement("button");

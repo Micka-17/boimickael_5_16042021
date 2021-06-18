@@ -71,7 +71,7 @@ function createCard (selectedProduct) {
         <a class="add" href="../front-end/basket.html"><i class="fas fa-cart-arrow-down fa-3x arrow"></i></a>`;
 
         //////////////// nombre de produit
- //// Salut Nicolas ! La ça marche///////////////
+ //// Salut Nicolas ! Là ///////////////
         let valueCount
 
         document.querySelector(".plus-btn").addEventListener("click", function() {

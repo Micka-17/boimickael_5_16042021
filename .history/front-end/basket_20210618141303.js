@@ -96,7 +96,7 @@ if(savedValue === null) {
                document.querySelector(".plus-btn").classList.remove("disabled");
            } 
 });
-     // }  //// Au revoir Nicolas ! Ca merde plus!///////////////
+     // }  //// Au revoir Nicolas ! Ca merde plus///////////////
     }
 
     let btnConfirm = document.createElement("button");
