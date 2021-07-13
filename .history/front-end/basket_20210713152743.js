@@ -124,6 +124,7 @@ if(savedValue === null) {
     })
   }
 //// fin probleme 1
+///// debut problem 2
   let btnConfirm = document.createElement("button");
   container.appendChild(btnConfirm);
   btnConfirm.classList.add("d-flex", "justify-content-evenly", "btn", "btnConfirm");
@@ -145,6 +146,7 @@ const btnconf = document.querySelector(".btnConfirm")
 alert("Tu déconne")
 let savedValue = JSON.parse(localStorage.getItem("product"));  ///json => js
 console.log(savedValue);
+//// fin probleme 1
 
 ///if else + const
 

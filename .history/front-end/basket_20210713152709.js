@@ -123,7 +123,7 @@ if(savedValue === null) {
       console.log(supId);
     })
   }
-//// fin probleme 1
+
   let btnConfirm = document.createElement("button");
   container.appendChild(btnConfirm);
   btnConfirm.classList.add("d-flex", "justify-content-evenly", "btn", "btnConfirm");

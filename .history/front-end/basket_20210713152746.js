@@ -124,6 +124,7 @@ if(savedValue === null) {
     })
   }
 //// fin probleme 1
+///// debut problem 2
   let btnConfirm = document.createElement("button");
   container.appendChild(btnConfirm);
   btnConfirm.classList.add("d-flex", "justify-content-evenly", "btn", "btnConfirm");
