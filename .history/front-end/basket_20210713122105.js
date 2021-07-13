@@ -118,10 +118,10 @@ if(savedValue === null) {
         id : savedValue[l].numberId,
         option : savedValue[l].optionSelected,
     }
-      localStorage.removeItem(supId);
       console.log("Le supId");
       console.log(supId);
     })
+    localStorage.removeItem(supId)
   }
 
   let btnConfirm = document.createElement("button");

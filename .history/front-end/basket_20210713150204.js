@@ -122,6 +122,7 @@ if(savedValue === null) {
       console.log("Le supId");
       console.log(supId);
     })
+    localStorage.removeItem(supId);
   }
 
   let btnConfirm = document.createElement("button");

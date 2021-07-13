@@ -108,17 +108,15 @@ if(savedValue === null) {
     }
   };
 
+  
   let btnsup = document.querySelectorAll(".deleteMe");
   //console.log("btn " + btnsup);
   for (let l = 0; l < savedValue.length; l++){
     btnsup[l].addEventListener("click",(event) =>{
       event.preventDefault();
       // tout sup localStorage.clear();
-      let supId = {
-        id : savedValue[l].numberId,
-        option : savedValue[l].optionSelected,
-    }
-      localStorage.removeItem(supId);
+      
+    localStorage.removeItem(supId)
       console.log("Le supId");
       console.log(supId);
     })

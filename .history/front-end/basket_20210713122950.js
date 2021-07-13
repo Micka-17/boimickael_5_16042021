@@ -118,7 +118,7 @@ if(savedValue === null) {
         id : savedValue[l].numberId,
         option : savedValue[l].optionSelected,
     }
-      localStorage.removeItem(supId);
+    localStorage.rem();
       console.log("Le supId");
       console.log(supId);
     })

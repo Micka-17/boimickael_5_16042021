@@ -114,11 +114,11 @@ if(savedValue === null) {
     btnsup[l].addEventListener("click",(event) =>{
       event.preventDefault();
       // tout sup localStorage.clear();
+      
       let supId = {
         id : savedValue[l].numberId,
         option : savedValue[l].optionSelected,
     }
-      localStorage.removeItem(supId);
       console.log("Le supId");
       console.log(supId);
     })

@@ -113,17 +113,25 @@ if(savedValue === null) {
   for (let l = 0; l < savedValue.length; l++){
     btnsup[l].addEventListener("click",(event) =>{
       event.preventDefault();
-      // tout sup localStorage.clear();
-      let supId = {
+
+      // let supId = {
+      //   option : savedValue.optionSelected,
+      //   id : savedValue.numberId,
+      // }
+      let infoProduit = {
         id : savedValue[l].numberId,
-        option : savedValue[l].optionSelected,
+        titleArticle : selectedProduct.name,
+        priceOf : selectedProduct.price,
+        optionSelected : allOptions.value,
+        productQuantity : quantity.value,
     }
-      localStorage.removeItem(supId);
+     
+      
       console.log("Le supId");
       console.log(supId);
     })
   }
-
+/*
   let btnConfirm = document.createElement("button");
   container.appendChild(btnConfirm);
   btnConfirm.classList.add("d-flex", "justify-content-evenly", "btn", "btnConfirm");
@@ -165,3 +173,4 @@ console.log(savedValue);
 
 
 })
+*/
