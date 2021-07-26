@@ -4,7 +4,7 @@ console.log(savedValue);
 const main = document.getElementById("product");
 main.classList.add("d-flex","justify-content-evenly", "margin-top");
 
-if(savedValue === null || savedValue.length === 0) {
+if(savedValue === null) {
   const main = document.getElementById("product");
 
   let empty = document.createElement("p");
@@ -114,7 +114,7 @@ if(savedValue === null || savedValue.length === 0) {
     btnsup[l].addEventListener("click",(event) =>{
       event.preventDefault();
       // tout sup localStorage.clear();
-      const savedValue = JSON.parse(localStorage.getItem("product"));;
+      const saved = JSON.parse(localStorage.getItem("product"));;
       console.log();
 
       let supId = {

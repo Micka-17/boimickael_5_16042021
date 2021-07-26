@@ -4,9 +4,9 @@ console.log(savedValue);
 const main = document.getElementById("product");
 main.classList.add("d-flex","justify-content-evenly", "margin-top");
 
-if(savedValue === null || savedValue.length === 0) {
+if(localStorage.key("product") === null) {
   const main = document.getElementById("product");
-
+console.log();
   let empty = document.createElement("p");
     main.appendChild(empty);
     empty.classList.add("d-flex", "align-items-sm-center", "column", "empytText")

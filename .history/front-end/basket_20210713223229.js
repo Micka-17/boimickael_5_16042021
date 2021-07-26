@@ -4,7 +4,7 @@ console.log(savedValue);
 const main = document.getElementById("product");
 main.classList.add("d-flex","justify-content-evenly", "margin-top");
 
-if(savedValue === null || savedValue.length === 0) {
+if(savedValue === null) {
   const main = document.getElementById("product");
 
   let empty = document.createElement("p");
@@ -114,25 +114,18 @@ if(savedValue === null || savedValue.length === 0) {
     btnsup[l].addEventListener("click",(event) =>{
       event.preventDefault();
       // tout sup localStorage.clear();
-      const savedValue = JSON.parse(localStorage.getItem("product"));;
-      console.log();
-
+      const loclocalStorage.getItem("product");
+      console.log(product);
       let supId = {
-       index : savedValue[l],
-       // id : savedValue[l].numberId,
-       // option : savedValue[l].optionSelected,
-    };
+        id : savedValue[l].numberId,
+        option : savedValue[l].optionSelected,
+    }
+      localStorage.removeItem(supId);
+      console.log("Le supId");
       console.log(supId);
-      savedValue.splice(supId, 1);
-      //on enregistre le nouveau localStorage
-      localStorage.setItem("product", JSON.stringify(savedValue));
-      JSON.parse(localStorage.getItem("product"));
-
-      alert('Cet article a bien été supprimé !');
-      window.location.href = "../front-end/basket.html";   
     })
-  };
-
+  }
+//// fin probleme 1
   let btnConfirm = document.createElement("button");
   container.appendChild(btnConfirm);
   btnConfirm.classList.add("d-flex", "justify-content-evenly", "btn", "btnConfirm");

@@ -4,7 +4,7 @@ console.log(savedValue);
 const main = document.getElementById("product");
 main.classList.add("d-flex","justify-content-evenly", "margin-top");
 
-if(savedValue === null || savedValue.length === 0) {
+if(savedValue === null ) {
   const main = document.getElementById("product");
 
   let empty = document.createElement("p");

@@ -135,6 +135,6 @@ else{
     savedValue = [];
     addProductBasket();
     console.log(savedValue);
-}
+
 
     })
