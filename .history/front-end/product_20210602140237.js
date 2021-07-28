@@ -1,2 +1,0 @@
-// recup id url
-
