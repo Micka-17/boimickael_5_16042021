@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.0.1-dist/css/bootstrap.css">
+
+    <script src="https://kit.fontawesome.com/7f2b024bdc.js" crossorigin="anonymous"></script>
+    <script src="/back-end/app.js"></script>
+
+    <title>Orinoco</title>
+</head>
+    <body>
+        <div id="container">
+            <header>
+                <div class="top">
+                    <a href="../index.html">
+                    <img src="../back-end/images/Orinoco.png" alt="logo-orinoco" class="logo">
+                    </a>
+                    <h1 id="title">Acheter different, Acheter malin</h1>
+                    <a class="main" href="../index.html"><i class="fas fa-home"></i></a>
+                    <a class="shop" href="../front-end/basket.html"><i class="fas fa-cart-plus"></i></a>
+                </div>
+            </header>
+
+            <div id="product">
+                
+            </div>
+            <div id="form">
+                <h4 class="mb-3">Adresse de livraison</h4> 
+                <form novalidate>    
+                    <div class="row g-3">
+                        <div class="col-sm-3">
+                            <label for="firstName" class="form-control">Nom</label>
+                            <input id="firstName" type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="lastName" class="form-control">Prenom</label>
+                            <input id="lastName" type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="number" class="form-control">Telephone</label>
+                            <input id="number" type="number" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="email" class="form-control">Mail</label>
+                            <input id="email" type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="localisation" class="form-control">Adresse</label>
+                            <input id="localisation" type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="zipcode" class="form-control">Code postale</label>
+                            <input id="zipcode" type="number" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="city" class="form-control">Ville</label>
+                            <input id="city" type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Champ obligatoire.
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input id="sameAdresse" type="checkbox" class="form-check-input">
+                                <label class="form-check-label" for="sameAdress">Adresse de facturation identique.</label>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Payments</h4>
+                        <div class="form-check">
+                            <input id="creditCard" type="radio" class="form-check-input" name="payementMethod" checked required>
+                            <label for="creditCard">Visa</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="directDebit" type="radio" class="form-check-input" name="payementMethod" checked required>
+                            <label for="directDebit">MasterCard</label>
+                        </div>
+                        <div class="form-check">
+                            <input id="PayPal" type="radio" class="form-check-input" name="payementMethod" checked required>
+                            <label for="PayPal">PayPal</label>
+                        </div>
+
+                        <div class="row my-3 gy-3">
+                            <div class="col-md-6">
+                                Nom complet
+                                <input type="text" class="form-control">
+                                <div class="invalid-feedback">
+                                    Champ obligatoire
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                Numero de carte
+                                <input type="text" class="form-control">
+                                <div class="invalid-feedback">
+                                    Champ obligatoire
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="expireTime" class="form-label">Date d'expiration</label>
+                                <input id="expireTime" type="text" class="form-control">
+                                <div class="invalid-feedback">
+                                    Champ obligatoire
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label for="securityCode" class="form-label">Date d'expiration</label>
+                                <input id="expireTime" type="text" class="form-control">
+                                <div class="invalid-feedback">
+                                    Champ obligatoire
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="bottom">
+            <div class="flex-footer">
+                <a>Info</a>
+                <a>Conditions d'utilisations</a>
+                <a href="mailto:pasderemboursement@pigeon.fr" class="contact">
+                Contact
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src='../front-end/basket.js'></script>
+</html>
