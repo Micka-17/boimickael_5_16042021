@@ -1,6 +1,4 @@
 let savedValue = JSON.parse(localStorage.getItem("product"));  ///json => js
-console.log('first');
-console.log(savedValue)
 
 // Création du corps
 const main = document.getElementById("product");
@@ -117,18 +115,19 @@ else {
           brother.nextElementSibling.classList.remove("disabled");
         };
         if (valueCount <= 0) {
-          savedValue = JSON.parse(localStorage.getItem("product"));
+          const savedValue = JSON.parse(localStorage.getItem("product"));
 
-            let supThisid = {
+          let supId = {
             index: savedValue,
           };
-          savedValue.splice(supThisid, 1);
+          console.log(index);
+          savedValue.splice(supId, 1);
           //on enregistre le nouveau localStorage
-          localStorage.setItem("product", JSON.stringify(savedValue));
+          /* localStorage.setItem("product", JSON.stringify(savedValue));
           JSON.parse(localStorage.getItem("product"));
 
           alert('Cet article a bien été supprimé !');
-          window.location.href = "../front-end/basket.html";
+          window.location.href = "../front-end/basket.html"; */
 
         };   
           /* savedValue.productQuantity = valueCount;
@@ -144,18 +143,14 @@ for (let l = 0; l < savedValue.length; l++) {
   btnsup[l].addEventListener("click", (event) => {
     event.preventDefault();
     // tout sup localStorage.clear();
+    const savedValue = JSON.parse(localStorage.getItem("product"));
     console.log(savedValue);
 
-    let removeItem = savedValue[l];
-
-    const index = savedValue.findIndex(function (product) {
-      return product.numberId === removeItem.numberId;
-    });
-    console.log(index)
-
-    savedValue.splice(index, 1);
-    console.log(savedValue);
-
+    let supId = {
+      index: savedValue[l],
+    };
+    console.log(supId);
+    savedValue.splice(supId, 1);
     //on enregistre le nouveau localStorage
     localStorage.setItem("product", JSON.stringify(savedValue));
     JSON.parse(localStorage.getItem("product"));

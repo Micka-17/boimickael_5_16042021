@@ -119,7 +119,7 @@ else {
         if (valueCount <= 0) {
           savedValue = JSON.parse(localStorage.getItem("product"));
 
-            let supThisid = {
+          let supThisid = {
             index: savedValue,
           };
           savedValue.splice(supThisid, 1);
@@ -144,24 +144,22 @@ for (let l = 0; l < savedValue.length; l++) {
   btnsup[l].addEventListener("click", (event) => {
     event.preventDefault();
     // tout sup localStorage.clear();
-    console.log(savedValue);
+    savedValue = JSON.parse(localStorage.getItem("product"));
 
-    let removeItem = savedValue[l];
-
-    const index = savedValue.findIndex(function (product) {
-      return product.numberId === removeItem.numberId;
-    });
-    console.log(index)
-
-    savedValue.splice(index, 1);
-    console.log(savedValue);
-
+    let supId = {savedValue[l],
+  };
+    console.log(supId);
+    console.log(savedValue)
+    //savedValue.remove(supId.index);
+    supId.splice(0, 1);
+    console.log(supId.splice(0, 1));
+    console.log(savedValue)
     //on enregistre le nouveau localStorage
-    localStorage.setItem("product", JSON.stringify(savedValue));
+    /* localStorage.setItem("product", JSON.stringify(savedValue));
     JSON.parse(localStorage.getItem("product"));
 
     alert('Cet article a bien été supprimé !');
-    window.location.href = "../front-end/basket.html";
+    window.location.href = "../front-end/basket.html"; */ 
   })
 };
 

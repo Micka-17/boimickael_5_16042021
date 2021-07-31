@@ -116,10 +116,10 @@ else {
           brother.nextElementSibling.removeAttribute("disabled");
           brother.nextElementSibling.classList.remove("disabled");
         };
-        if (valueCount <= 0) {
+        /* /* /* if (valueCount <= 0) {
           savedValue = JSON.parse(localStorage.getItem("product"));
 
-            let supThisid = {
+          let supThisid = {
             index: savedValue,
           };
           savedValue.splice(supThisid, 1);
@@ -130,38 +130,37 @@ else {
           alert('Cet article a bien été supprimé !');
           window.location.href = "../front-end/basket.html";
 
-        };   
+        };    */
           /* savedValue.productQuantity = valueCount;
           localStorage.setItem("product", JSON.stringify(savedValue));
-          console.log(savedValue);   */  
+          console.log(savedValue);   */  */ */ 
       });
     }
   }
 };
 // Suppression d'un article directe
 let btnsup = document.querySelectorAll(".deleteMe");
-for (let l = 0; l < savedValue.length; l++) {
-  btnsup[l].addEventListener("click", (event) => {
+//console.log("btn " + btnsup);
+for (let l = 0; l < savedValue.length; l++){
+  btnsup[l].addEventListener("click",(event) =>{
     event.preventDefault();
     // tout sup localStorage.clear();
-    console.log(savedValue);
+    const savedValue = JSON.parse(localStorage.getItem("product"));;
+    console.log();
 
-    let removeItem = savedValue[l];
-
-    const index = savedValue.findIndex(function (product) {
-      return product.numberId === removeItem.numberId;
-    });
-    console.log(index)
-
-    savedValue.splice(index, 1);
-    console.log(savedValue);
-
+    let supId = {
+     index : savedValue[l],
+     // id : savedValue[l].numberId,
+     // option : savedValue[l].optionSelected,
+  };
+    console.log(supId);
+    savedValue.splice(supId, 1);
     //on enregistre le nouveau localStorage
     localStorage.setItem("product", JSON.stringify(savedValue));
     JSON.parse(localStorage.getItem("product"));
 
     alert('Cet article a bien été supprimé !');
-    window.location.href = "../front-end/basket.html";
+    window.location.href = "../front-end/basket.html";   
   })
 };
 

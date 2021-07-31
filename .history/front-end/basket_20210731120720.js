@@ -161,7 +161,7 @@ for (let l = 0; l < savedValue.length; l++) {
     JSON.parse(localStorage.getItem("product"));
 
     alert('Cet article a bien été supprimé !');
-    window.location.href = "../front-end/basket.html";
+    window.location.href = "../front-end/basket.html"; */
   })
 };
 

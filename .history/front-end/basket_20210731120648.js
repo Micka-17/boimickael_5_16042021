@@ -155,13 +155,13 @@ for (let l = 0; l < savedValue.length; l++) {
 
     savedValue.splice(index, 1);
     console.log(savedValue);
-
+    //console.log(savedValue.splice(supId, 1));
     //on enregistre le nouveau localStorage
-    localStorage.setItem("product", JSON.stringify(savedValue));
+    /* localStorage.setItem("product", JSON.stringify(savedValue));
     JSON.parse(localStorage.getItem("product"));
 
     alert('Cet article a bien été supprimé !');
-    window.location.href = "../front-end/basket.html";
+    window.location.href = "../front-end/basket.html"; */
   })
 };
 
