@@ -214,9 +214,20 @@ btnForm.addEventListener("click", (e) => {
       console.log(data);
       //
     });
-    localStorage.setItem("maps", JSON.stringify(data));
-    window.location.href = "../front-end/order.html"
-  }
+    fetch("http://localhost:3000/api/cameras/order", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ productmaps,  }),
+  })
+      .then((response) => response.json())
+      .then((data) => {
+          localStorage.setItem("order", JSON.stringify(data));
+          document.location.href = "order.html";
+      })
+      .catch((erreur) => console.log("erreur : " + erreur));
+}
   else {
     alert('Formulaire non valide!');
   }

@@ -197,16 +197,16 @@ btnForm.addEventListener("click", (e) => {
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
   const regexAdresse = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
   const regexCodePostale = /^[0-9]{5}$/;
-  const regexCity = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,50}$/;
+  const regexCity = /^[A-Za-z]{3-20}$/;
 
   if (
     (regexfirstName.test(maps.firstName) == true) &
     (regexlastName.test(maps.lastName) == true) &
-    (regexNum.test(maps.num) == true) &
+    (regexNum.test(maps.num) == true)/*  &
     (regexEmail.test(maps.email) == true) &
     (regexAdresse.test(maps.adresse) == true) &
     (regexCodePostale.test(maps.codePostale) == true) &
-    (regexCity.test(maps.city) == true)
+    (regexCity.test(maps.city) == true) */
   ) {
     let data = {};
     document.querySelectorAll('.form-control').forEach(input => {

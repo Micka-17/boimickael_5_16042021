@@ -289,7 +289,7 @@ console.log(total);
  const order = document.getElementById("order");
  const regexName = ;
  const regexCity = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+)){1,10}$/;
- const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
+ const regexMail = ;
  const regexAddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
  const checkBox = document.getElementById("invalidCheck2");
 
@@ -333,24 +333,6 @@ console.log(total);
          );
      }
  });
-
- fetch("http://localhost:3000/api/cameras/order", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ product, maps }),
-  })
-      .then((response) => response.json())
-      .then((data) => {
-          localStorage.setItem("order", JSON.stringify(data));
-          document.location.href = "order.html";
-      })
-      .catch((erreur) => console.log("erreur : " + erreur));
-}
-  else {
-    alert('Formulaire non valide!');
-  }
 
 
  adresse: "1497 route de lançon"

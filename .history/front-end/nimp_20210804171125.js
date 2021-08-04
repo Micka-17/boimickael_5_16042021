@@ -334,23 +334,7 @@ console.log(total);
      }
  });
 
- fetch("http://localhost:3000/api/cameras/order", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ product, maps }),
-  })
-      .then((response) => response.json())
-      .then((data) => {
-          localStorage.setItem("order", JSON.stringify(data));
-          document.location.href = "order.html";
-      })
-      .catch((erreur) => console.log("erreur : " + erreur));
-}
-  else {
-    alert('Formulaire non valide!');
-  }
+ 
 
 
  adresse: "1497 route de lançon"

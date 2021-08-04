@@ -183,30 +183,30 @@ btnForm.addEventListener("click", (e) => {
     firstName: document.getElementById("firstName").value,
     lastName: document.getElementById("lastName").value,
     num: document.getElementById("number").value,
-    email: document.getElementById("email").value,
+    /* email: document.getElementById("email").value,
     adresse: document.getElementById("localisation").value,
     codePostale: document.getElementById("zipcode").value,
-    city: document.getElementById("city").value,
+    city: document.getElementById("city").value, */
   };
   console.log(firstName);
   console.log(lastName);
   
   const regexfirstName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
   const regexlastName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
-  const regexNum = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/; 
+  const regexNum = /^[0-9]{8-12}$/;/* 
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
   const regexAdresse = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,10}$/;
   const regexCodePostale = /^[0-9]{5}$/;
-  const regexCity = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,50}$/;
+  const regexCity = /^[A-Za-z]{3-20}$/; */
 
   if (
     (regexfirstName.test(maps.firstName) == true) &
     (regexlastName.test(maps.lastName) == true) &
-    (regexNum.test(maps.num) == true) &
+    (regexNum.test(maps.num) == true)/*  &
     (regexEmail.test(maps.email) == true) &
     (regexAdresse.test(maps.adresse) == true) &
     (regexCodePostale.test(maps.codePostale) == true) &
-    (regexCity.test(maps.city) == true)
+    (regexCity.test(maps.city) == true) */
   ) {
     let data = {};
     document.querySelectorAll('.form-control').forEach(input => {
