@@ -1,0 +1,1 @@
+let savedValue = JSON.parse(localStorage.getItem("product"));
