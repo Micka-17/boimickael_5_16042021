@@ -13,7 +13,7 @@ const main = document.querySelector(".bottom-container");
 
 for (let i = 0; i < savedValueProduct.length; i++) {
     let container = document.createElement("div");
-    container.classList.add("d-flex", "card", "justify-content-evenly", "m-5");
+    container.classList.add("d-flex", "card", "justify-content-evenly", ""card", "container-sm", "m-5");
     main.appendChild(container);
 
     let newDiv = document.createElement("h3");

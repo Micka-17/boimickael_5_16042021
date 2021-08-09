@@ -104,11 +104,11 @@ else {
       valueCount = element.nextElementSibling.value;
       const brotherElement = element.nextElementSibling;
 
-      if (valueCount <= 2) {
+      if (valueCount <= 3) {
         brotherElement.nextElementSibling.removeAttribute("disabled");
         brotherElement.nextElementSibling.classList.remove("disabled");
       };
-      if (valueCount <= 1) {
+      if (valueCount >= 1) {
         element.setAttribute("disabled", "disabled");
       };
 

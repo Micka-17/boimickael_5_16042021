@@ -129,6 +129,8 @@ function createCard(selectedProduct) {
             let index = null;
             for (let i = 0; i < savedValue.length; i += 1) {
                 const productOfCart = savedValue[i];
+                console.log(infoProduit.titleArticle)
+                console.log(productOfCart.name)
                 if (infoProduit.titleArticle !== productOfCart.titleArticle) {
                     continue;
                 }

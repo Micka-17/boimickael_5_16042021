@@ -95,16 +95,13 @@ else {
       })
     };
 
-    ///// btn moins ////////////
-
     buttonsremove = document.querySelectorAll(".minus-btn");
     for (k = 0; k < buttonsremove.length; k++) {
-      element = buttonsremove[k];
 
       valueCount = element.nextElementSibling.value;
       const brotherElement = element.nextElementSibling;
 
-      if (valueCount <= 2) {
+      if (valueCount <= 3) {
         brotherElement.nextElementSibling.removeAttribute("disabled");
         brotherElement.nextElementSibling.classList.remove("disabled");
       };

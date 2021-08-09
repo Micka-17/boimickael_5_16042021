@@ -93,25 +93,11 @@ else {
         localStorage.setItem("product", JSON.stringify(savedValue));
         location.reload();
       })
-    };
 
-    ///// btn moins ////////////
+    };
 
     buttonsremove = document.querySelectorAll(".minus-btn");
     for (k = 0; k < buttonsremove.length; k++) {
-      element = buttonsremove[k];
-
-      valueCount = element.nextElementSibling.value;
-      const brotherElement = element.nextElementSibling;
-
-      if (valueCount <= 2) {
-        brotherElement.nextElementSibling.removeAttribute("disabled");
-        brotherElement.nextElementSibling.classList.remove("disabled");
-      };
-      if (valueCount <= 1) {
-        element.setAttribute("disabled", "disabled");
-      };
-
       element = buttonsremove[k];
       element.addEventListener("click", function (e) {
         e.stopImmediatePropagation();
@@ -126,12 +112,18 @@ else {
           brother.nextElementSibling.removeAttribute("disabled");
           brother.nextElementSibling.classList.remove("disabled");
         };
-        if (valueCount <= 1) {
-          this.setAttribute("disabled", "disabled");
+        if (valueCount <= 0) {
+          savedValue = JSON.parse(localStorage.getItem("product"));
 
+          let supThisid = {
+            index: savedValue,
+          };
+          savedValue.splice(supThisid, 1);
           //on enregistre le nouveau localStorage
           localStorage.setItem("product", JSON.stringify(savedValue));
           JSON.parse(localStorage.getItem("product"));
+
+          alert('Cet article a bien été supprimé !');
           window.location.href = "../front-end/basket.html";
 
         };
@@ -142,6 +134,7 @@ else {
     }
     // Je calcul le prix total du panier
     var totalPrices = $value;
+
 
   }
   let btnForm = document.querySelector(".btnForm");
@@ -156,6 +149,7 @@ for (let l = 0; l < savedValue.length; l++) {
   btnsup[l].addEventListener("click", (event) => {
     event.preventDefault();
     // tout sup localStorage.clear();
+    console.log(savedValue);
 
     const removeItem = savedValue[l];
     // to do function qui trouve mon index dans ma savedValue au click
@@ -247,8 +241,14 @@ function send(allData) {
   promise.then(async (response) => {
     try {
         const contenu = await response.json();
+        console.log("la reponse du serveur :");
+        console.log(contenu);
 
         if (response.ok) {
+            console.log(`resultats de ${response.ok}`);
+
+            console.log("la reponse 2 du serveur :");
+            console.log(contenu.orderId);
             localStorage.setItem("responseId", contenu.orderId);
             window.location ="order.html";
         } else {

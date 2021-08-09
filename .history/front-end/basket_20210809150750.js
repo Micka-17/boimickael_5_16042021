@@ -93,25 +93,11 @@ else {
         localStorage.setItem("product", JSON.stringify(savedValue));
         location.reload();
       })
-    };
 
-    ///// btn moins ////////////
+    };
 
     buttonsremove = document.querySelectorAll(".minus-btn");
     for (k = 0; k < buttonsremove.length; k++) {
-      element = buttonsremove[k];
-
-      valueCount = element.nextElementSibling.value;
-      const brotherElement = element.nextElementSibling;
-
-      if (valueCount <= 2) {
-        brotherElement.nextElementSibling.removeAttribute("disabled");
-        brotherElement.nextElementSibling.classList.remove("disabled");
-      };
-      if (valueCount <= 1) {
-        element.setAttribute("disabled", "disabled");
-      };
-
       element = buttonsremove[k];
       element.addEventListener("click", function (e) {
         e.stopImmediatePropagation();
@@ -132,6 +118,8 @@ else {
           //on enregistre le nouveau localStorage
           localStorage.setItem("product", JSON.stringify(savedValue));
           JSON.parse(localStorage.getItem("product"));
+
+          alert('Cet article a bien été supprimé !');
           window.location.href = "../front-end/basket.html";
 
         };

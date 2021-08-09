@@ -47,7 +47,7 @@ function createCard(selectedProduct) {
     //// faire une boucle for
 
     let allLenses = selectedProduct.lenses;
-
+    
     for (let i = 0; i < allLenses.length; i++) {
 
         const lens = document.createElement("option");
@@ -118,6 +118,7 @@ function createCard(selectedProduct) {
         }
 
         let savedValue = [infoProduit];
+        console.log("les infos " + infoProduit);
         //// Save allValue of selected option 
         if (localStorage.length === 0) {
             localStorage.setItem("product", JSON.stringify(savedValue));
@@ -127,18 +128,25 @@ function createCard(selectedProduct) {
             let savedValue = JSON.parse(localStorage.getItem("product"));
             //Ajout panier
             let index = null;
-            for (let i = 0; i < savedValue.length; i += 1) {
+            for (let i = 0; i < savedValue.length; i+=1) {
+                console.log('for'+i);
+                console.log(savedValue);
                 const productOfCart = savedValue[i];
+                console.log(infoProduit.titleArticle)
+                console.log(productOfCart.name)
                 if (infoProduit.titleArticle !== productOfCart.titleArticle) {
+                    console.log('if 1')
                     continue;
                 }
                 if (infoProduit.optionSelected !== productOfCart.optionSelected) {
+                    console.log('if 2')
                     continue;
                 }
-
+            
                 index = i;
+                console.log(index)
             }
-
+            
             if (index === null) {
                 alert(`Le produit ${selectedProduct.name} est ajouté à votre panier !`)
                 savedValue.push(infoProduit);

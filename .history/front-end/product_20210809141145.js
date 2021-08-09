@@ -128,7 +128,11 @@ function createCard(selectedProduct) {
             //Ajout panier
             let index = null;
             for (let i = 0; i < savedValue.length; i += 1) {
+                ('for' + i);
+                console.log(savedValue)console.log;
                 const productOfCart = savedValue[i];
+                console.log(infoProduit.titleArticle)
+                console.log(productOfCart.name)
                 if (infoProduit.titleArticle !== productOfCart.titleArticle) {
                     continue;
                 }

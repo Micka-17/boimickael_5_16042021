@@ -93,22 +93,20 @@ else {
         localStorage.setItem("product", JSON.stringify(savedValue));
         location.reload();
       })
-    };
 
-    ///// btn moins ////////////
+    };
 
     buttonsremove = document.querySelectorAll(".minus-btn");
     for (k = 0; k < buttonsremove.length; k++) {
-      element = buttonsremove[k];
 
       valueCount = element.nextElementSibling.value;
       const brotherElement = element.nextElementSibling;
 
-      if (valueCount <= 2) {
+      if (valueCount >= 1) {
         brotherElement.nextElementSibling.removeAttribute("disabled");
         brotherElement.nextElementSibling.classList.remove("disabled");
       };
-      if (valueCount <= 1) {
+      if (valueCount >= 3) {
         element.setAttribute("disabled", "disabled");
       };
 

@@ -93,26 +93,24 @@ else {
         localStorage.setItem("product", JSON.stringify(savedValue));
         location.reload();
       })
-    };
 
-    ///// btn moins ////////////
+    };
 
     buttonsremove = document.querySelectorAll(".minus-btn");
     for (k = 0; k < buttonsremove.length; k++) {
       element = buttonsremove[k];
 
-      valueCount = element.nextElementSibling.value;
-      const brotherElement = element.nextElementSibling;
+      valueCount = element.previousElementSibling.value;
+      const brotherElement = element.previousElementSibling;
 
-      if (valueCount <= 2) {
+      if (valueCount >= 1) {
         brotherElement.nextElementSibling.removeAttribute("disabled");
-        brotherElement.nextElementSibling.classList.remove("disabled");
+        brotherElement.previousElementSibling.classList.remove("disabled");
       };
-      if (valueCount <= 1) {
+      if (valueCount >= 3) {
         element.setAttribute("disabled", "disabled");
       };
 
-      element = buttonsremove[k];
       element.addEventListener("click", function (e) {
         e.stopImmediatePropagation();
         e.preventDefault();
@@ -126,14 +124,8 @@ else {
           brother.nextElementSibling.removeAttribute("disabled");
           brother.nextElementSibling.classList.remove("disabled");
         };
-        if (valueCount <= 1) {
+        if (valueCount <= 0) {
           this.setAttribute("disabled", "disabled");
-
-          //on enregistre le nouveau localStorage
-          localStorage.setItem("product", JSON.stringify(savedValue));
-          JSON.parse(localStorage.getItem("product"));
-          window.location.href = "../front-end/basket.html";
-
         };
         savedValue[i].productQuantity = valueCount;
         localStorage.setItem("product", JSON.stringify(savedValue));
@@ -186,7 +178,7 @@ btnForm.addEventListener("click", (e) => {
     codePostale: document.getElementById("zipcode").value,
     city: document.getElementById("city").value,
   };
-  
+
   const regexfirstName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
   const regexlastName = /^(([a-zA-ZÀ-ÿ]+[\s\-]{1}[a-zA-ZÀ-ÿ]+)|([a-zA-ZÀ-ÿ]+))$/;
   const regexNum = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
@@ -231,7 +223,7 @@ btnForm.addEventListener("click", (e) => {
     };
     send(allData);
   } else {
-    alert ("Remplir le formulaire!")
+    alert("Remplir le formulaire!")
   }
 });
 
@@ -243,20 +235,20 @@ function send(allData) {
       "Content-Type": "application/json",
     },
   });
-////////////////////////
+  ////////////////////////
   promise.then(async (response) => {
     try {
-        const contenu = await response.json();
+      const contenu = await response.json();
 
-        if (response.ok) {
-            localStorage.setItem("responseId", contenu.orderId);
-            window.location ="order.html";
-        } else {
-            console.log("réponse du serveur" + response.status);
-            alert("Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande.");
-        }
+      if (response.ok) {
+        localStorage.setItem("responseId", contenu.orderId);
+        window.location = "order.html";
+      } else {
+        console.log("réponse du serveur" + response.status);
+        alert("Veuillez correctement renseigner l'entièreté du formulaire pour valider votre commande.");
+      }
     } catch (e) {
-        console.log(e);
+      console.log(e);
     }
-});
+  });
 }
