@@ -6,14 +6,14 @@ let savedValuePrice = JSON.parse(localStorage.getItem("totalPrice"));
 const title = document.querySelector(".top-container");
 let titleOrder = document.createElement("h2");
 title.appendChild(titleOrder);
-titleOrder.classList.add("title", "my-5", "mx-5");
+titleOrder.classList.add("title", "mb-5", "mx-5");
 titleOrder.textContent = `Merci pour votre commande numero ${savedValueId}`; //orderId
 
 const main = document.querySelector(".bottom-container");
 
 for (let i = 0; i < savedValueProduct.length; i++) {
     let container = document.createElement("div");
-    container.classList.add("d-flex", "card", "justify-content-evenly", "container-sm", "firstContainer", "my-5");
+    container.classList.add("d-flex", "card", "justify-content-evenly", "container-sm", "firstContainer");
     main.appendChild(container);
 
     let newDiv = document.createElement("h3");
