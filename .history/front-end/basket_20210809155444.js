@@ -16,7 +16,7 @@ if (savedValue === null || savedValue.length === 0) {
 
   let emptyImg = document.createElement("img");
   empty.appendChild(emptyImg);
-  emptyImg.classList.add("d-flex", "justify-content-evenly", "container-sm", "imgEmpty", "imgFit")
+  emptyImg.classList.add("d-flex", "justify-content-evenly", "container-sm", "imgEmpty", imgFit)
   emptyImg.src = src = "../back-end/images/yoann-siloine.jpg";
 }
 // Le panier est non vide alors mise en pages du panier avec les produits (boucle for)

@@ -16,7 +16,7 @@ if (savedValue === null || savedValue.length === 0) {
 
   let emptyImg = document.createElement("img");
   empty.appendChild(emptyImg);
-  emptyImg.classList.add("d-flex", "justify-content-evenly", "container-sm", "imgEmpty", "imgFit")
+  emptyImg.classList.add("d-flex", "justify-content-evenly", "container-sm", "imgEmpty")
   emptyImg.src = src = "../back-end/images/yoann-siloine.jpg";
 }
 // Le panier est non vide alors mise en pages du panier avec les produits (boucle for)
@@ -193,7 +193,7 @@ btnForm.addEventListener("click", (e) => {
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$/;
   const regexaddress = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,50}$/;
   const regexCodePostale = /^[0-9]{5}$/;
-  const regexCity = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-]{1}[a-zA-ZÀ-ÿ0-9]+)){1,50}$/;
+  const regexCity = /^(([a-zA-ZÀ-ÿ0-9]+[\s\-])){1,50}$/;
 
   if (
     (regexfirstName.test(contactForm.firstName) == true) &
